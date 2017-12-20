@@ -1,0 +1,12 @@
+language: java
+dist: trusty
+jdk:
+  - oraclejdk8
+script:
+  - echo "build passing"
+after_success:
+  - sh ./on-success.sh
+#  - sh ./automerge.sh
+notifications:
+  email:
+    - arindam.nayak@spigit.com
