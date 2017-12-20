@@ -12,6 +12,8 @@ echo ------------------------
 
 echo Automatic cherrypick last commit $LAST_COMMIT changes into 2.2,master
 
-git checkout 2.2 && git cherry-pick $LAST_COMMIT
+git fetch --all
 
-git checkout master && git cherry-pick $LAST_COMMIT
+git checkout 2.2 && git cherry-pick $LAST_COMMIT && git push origin 2.2
+
+git checkout master && git cherry-pick $LAST_COMMIT && git push origin master
